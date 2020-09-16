@@ -1,4 +1,4 @@
-module spacer(angle) {
+module spacer(angle, render_text=true) {
     rotate([angle / 2, 0, 0]) {
         difference(){
             union() {
@@ -21,9 +21,11 @@ module spacer(angle) {
                 }
             }
             rotate([-angle / 2, 0, 0]) {
-                translate([-1.5, 0, 20 - 0.4]) {
-                    linear_extrude(0.5){
-                        text(str(angle), 3);
+                if (render_text) {
+                    translate([-1.5, 0, 20 - 0.4]) {
+                        linear_extrude(0.5){
+                            text(str(angle), 3);
+                        }
                     }
                 }
                 translate([-6, -10, 20]) {
