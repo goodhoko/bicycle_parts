@@ -1,4 +1,5 @@
 module spacer(angle, render_text=true) {
+    // Rotate the whole spacer half the angle to align the base with XY plane.
     rotate([angle / 2, 0, 0]) {
         difference(){
             union() {
@@ -20,6 +21,8 @@ module spacer(angle, render_text=true) {
                     }
                 }
             }
+            // Rotate top and bottom constrains for half the angle
+            // to make oposing corners symetric.
             rotate([-angle / 2, 0, 0]) {
                 if (render_text) {
                     translate([-1.5, 0, 20 - 0.4]) {
