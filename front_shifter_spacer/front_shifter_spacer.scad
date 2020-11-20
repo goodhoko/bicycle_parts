@@ -36,7 +36,7 @@ module spacer(angle, bolt_diameter=5, render_text=true) {
                 if (render_text) {
                     translate([-1.5, 0, height - 0.5]) {
                         linear_extrude(1){
-                            text(str(angle), 3);
+                            text(str(angle), 3.5);
                         }
                     }
                 }
