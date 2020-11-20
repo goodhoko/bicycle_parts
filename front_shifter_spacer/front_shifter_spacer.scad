@@ -26,7 +26,7 @@ module spacer(angle, bolt_diameter=5, render_text=true) {
                     // Make the hole perpendicular to the shifter support.
                     // The bolt angle is meant to be evened out by conical washers under the bolt head.
                     rotate([90, 0, 0]) {
-                        cylinder(d=bolt_diameter, h=thickness + 10, center=true);
+                        cylinder(d=bolt_diameter + 0.5, h=thickness + 10, center=true);
                     }
                 }
             }
