@@ -10,6 +10,7 @@ spacer(angle, bolt_diameter, render_angle_mark);
 
 module spacer(angle, bolt_diameter=5, render_text=true) {
     // Do not expose these as the design is not (yet) ready for different values.
+    // Also these values are pretty standard. There shouldn't be much need to adjust them.
     height = 20;
     thickness = 10;
     mount_diameter = 10;
