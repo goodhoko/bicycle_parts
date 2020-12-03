@@ -2,10 +2,10 @@
 angle = 5; // [0:8]
 // Bolt diameter (mm)
 bolt_diameter = 5; // [4,5,6]
-// Whether to mark the top face with the value of the angle
-render_angle_mark = true; // [true,false]
+// Whether to mark the top face with the value of the angle. Makes it easier to tell various versions apart after printing.
+render_angle_mark = 1; // [1:true,0:false]
+$fn = 30;
 
-$fn = 100 + 0;
 spacer(angle, bolt_diameter, render_angle_mark);
 
 module spacer(angle, bolt_diameter=5, render_text=true) {
