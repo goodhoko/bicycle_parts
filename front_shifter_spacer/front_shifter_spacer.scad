@@ -6,7 +6,16 @@ bolt_diameter = 5; // [4,5,6]
 render_angle_mark = 1; // [1:true,0:false]
 $fn = 30;
 
-spacer(angle, bolt_diameter, render_angle_mark);
+
+for (i=[0:4]) {
+    translate([20 * i, 0, 0]) {
+        rotate([0, 0, 90]) {
+            spacer(i * 2, bolt_diameter, render_angle_mark);
+        }
+    }
+}
+
+
 
 module spacer(angle, bolt_diameter=5, render_text=true) {
     // Do not expose these as the design is not (yet) ready for different values.
